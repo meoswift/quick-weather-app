@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="weather.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Raleway:700|Roboto&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Quick weather</title>
+  </head>
+  <body>
+      <h1>Quick Weather!</h1>
+      <section class='search-box'>
+        <form id="search-container">
+            <input id="search-text" type="text" placeholder="City name (e.g: Boston, US)">
+        </form>
+        <section id='degree'>
+          <button type="button" id='toC' class="convert">Celcius</button>
+          <button type="button" id='toF' class="convert">Farenheit</button>
+        </section>
+        <div id="message" class="hidden">
+            Sorry, we cannot find the city you are looking for :(
+        </div>
+        <div id="weather-box" class="hidden">
+          <div id="weather-main">
+            <div id="current-temp"></div>
+            <img id='weather-icon'></img>
+            <div id="city-name"></div>
+            <hr>
+            <div id="weather-extra">
+              <div id="description"></div>
+              <div id='pressure'></div>
+              <div id='humidity'></div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </body>
+</html>
