@@ -13,8 +13,8 @@ class App {
 
     this.currentTemp = 0;
 
-    //const searchButton = document.querySelector('form');
-    //searchButton.addEventListener('submit', this.onSubmit);
+    const searchButton = document.querySelector('form');
+    searchButton.addEventListener('keyp', this.toF);
 
     const farenheitButton = document.querySelector('#toF');
     farenheitButton.addEventListener('click', this.toF);
