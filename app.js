@@ -14,7 +14,7 @@ class App {
     this.currentTemp = 0;
 
     const searchButton = document.querySelector('form');
-    searchButton.addEventListener('keyp', this.toF);
+    searchButton.addEventListener('submit', this.toF);
 
     const farenheitButton = document.querySelector('#toF');
     farenheitButton.addEventListener('click', this.toF);
@@ -33,7 +33,8 @@ class App {
       .then(this.onJSONReady);
   }
 
-  toF() {
+  toF(event) {
+    event.preventDefault();
     const textInput = document.querySelector('#search-text');
     const query = encodeURIComponent(textInput.value);
     const URL_FETCH = BASE_URL + query + UNIT_IMPERIAL + API_KEY;
