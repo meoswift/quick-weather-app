@@ -6,7 +6,6 @@ const UNIT_IMPERIAL = '&units=imperial';
 class App {
   constructor() {
     this.onJSONReady = this.onJSONReady.bind(this);
-    //this.onSubmit = this.onSubmit.bind(this);
     this.onFound = this.onFound.bind(this);
     this.toF = this.toF.bind(this);
     this.toC = this.toC.bind(this);
